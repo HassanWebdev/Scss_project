@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+html{
+ 
+    font-size: 10px;
+    font-family: "Rubik", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    color: white;
+    background-color: hsl(270, 20%, 96%) ;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background: hsl(270, 20%, 96%);
+    display: flex;
+    justify-content: center;
+}
+.Main__background{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 60rem;
+    background:linear-gradient( hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    z-index: -1;
+    border-bottom-right-radius: 60rem;
+    border-bottom-left-radius: 100rem;
+    transform: translateX(-66%);
+}
+
+
+.main__Phone{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    display: flex;
+}
+.main__firstHalf{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: end;
+}
+.Phone{
+    position: relative;
+    width: 30rem;
+    height: 62rem;
+    border-radius: 2rem;
+    background: hsl(270, 20%, 96%);
+    border: 1.5rem solid white;
+}
+.Phone__header{
+    position: relative;
+    width: 100%;
+    height: 9rem;
+    background: linear-gradient(to right,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+.Phone__Notach{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 13rem;
+    height: 2.5rem;
+    border-radius: 1.2rem;
+    background-color: white;
+    margin-top: -.8rem;
+}
+.header__Content{ 
+    width: 100%;
+    position: absolute;
+    bottom: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+}
+
+.Content__avtar{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.6rem;
+    border: .2rem solid hsl(270, 20%, 96%);
+    margin-left: -.8rem;
+}
+.avtar--img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+}
+.Content__text{
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    margin-left: -1rem;
+}
+.text--sm{
+    color: hsl(276, 100%, 81%);
+    font-size: .9rem;
+}
+.text--md{
+font-size: medium;
+font-weight: normal;
+}
+.Content__Dot{
+    margin-left: 3.5rem;
+}
+.Phone__body{
+    position: absolute;
+    top: 9rem;
+    width: 100%;
+    height: auto;     
+    padding-top: 2rem;
+    padding-left: .8rem;
+    padding-right: .8rem;
+}
+@mixin Message--2{
+        padding: .6rem;
+        background-color: rgb(237, 229, 244);
+        width: 70%;
+        height: 4rem;
+        border-radius: 1rem;
+        font-size: 1rem;
+        color: hsl(276, 100%, 81%);
+        margin-bottom: .7rem;
+        align-items: center;
+}
+.Message--1{
+   @include Message--2()
+}
+
+.Message2--img{
+    width: 4rem;
+    height: 4rem;
+    border-radius: .8rem;
+}
+.Message2__img{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.4rem;
+    justify-content: end;
+}
+.Message2__Message1{
+margin-top: 1rem;
+ width: 100%;   
+ display: flex;
+ flex-direction: column;
+ align-items: end;
+}
+.Message2--1{
+   @include Message--2;
+   width:70%;
+   background-color: white
+}
+
+.Message2--2{
+    @include Message--2;
+    width: 40%;
+    height: 3rem;
+    align-items: center;
+    background-color:white;
+}
+
+.Message3--1{
+    @include Message--2;
+    height: 5rem;
+    width: 70%;
+    align-items: center;
+}
+.btn__Message3{
+    margin-top: 1rem;
+    width: 80%;
+    height: auto;
+}
+.btn--1{
+        padding: 1rem;
+        width: 100%;
+        height: 4rem;
+        border-radius: 1rem;
+        background:linear-gradient(to right ,hsl(293, 100%, 63%),hsl(264, 100%, 61%)) ;
+        color: white;
+        font-size: 1rem;
+        font-family: "Rubik",sans-serif;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+}
+.btn--radio{
+    display: flex;
+    gap: 1rem;
+}
+.input__Message3{
+    position: relative;
+    width: 100%;
+    height: 5rem;
+    border-radius: 1rem;
+    border: 1px solid hsl(270, 20%, 96%);
+    padding: 0 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+.input--text{
+    border: none;
+    width: 100%;
+    height: 4rem; 
+    border-radius: 2rem;  
+    padding: 1.5rem;
+}
+.btn--submit{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+    border: none;
+    color: white;
+    transform: rotate(180deg);
+    background-color: hsl(271, 36%, 24%);
+    position: absolute ;
+    left: 80%;
+    top: 91.4%;
+    cursor: pointer;
+}
+.main__SecondHalf h1 {
+    color: hsl(271, 36%, 24%);
+    font-weight: 500;
+    font-size: 3.5rem;
+  }
+  
+  .main__SecondHalf p {
+    color: hsl(270, 7%, 64%);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    line-height: 2rem;
+  }
+  @media only screen and (min-width: 768px){
+    .main__Phone{
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 3rem;
+    }
+    .main__LeftHalf {
+      width: 50%;
+      height: auto;
+      display: flex;
+      justify-content: end;
+    }
+    .main__SecondHalf{
+      width: 50%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      padding-left: 10rem;
+    }
+
+  }
+  @media only screen and (max-width: 768px){
+    .main__Phone{
+      width: 100%;
+      height: 100%;
+      background:transparent;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+    }
+    .main__SecondHalf{
+      width: 78%;
+      height: 100%;
+      text-align: center;
+      margin-top: 8rem;
+    }
+    .Main__background{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 45rem;
+        background:linear-gradient( hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+        z-index: -1;
+        border-bottom-right-radius: 60rem;
+        border-bottom-left-radius: 100rem;
+        transform: translateX(-50%);
+    }
+    
+  }
